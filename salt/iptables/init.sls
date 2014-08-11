@@ -8,9 +8,9 @@ iptables:
       - pkg: iptables
 
 
-/etc/iptables.rules:
+/etc/sysconfig/iptables:
   file.managed:
-    - source: salt://iptables/iptables.rules
+    - source: salt://iptables/iptables
     - user: root
     - group: root
     - mode: 644
