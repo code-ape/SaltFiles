@@ -1,7 +1,8 @@
 pkgs:
-  {% if grains['osarch'] == 'armv6hl' %}
+  {% if grains['osarch'] == 'armv6l' %}
   go: golang.armv6hl
   git: git.armv6hl
+  iptables: iptables.armv6hl
   pip: python-pip.armv6hl
   pip3: python3-pip.armv6hl
   python: python.armv6hl
@@ -11,6 +12,7 @@ pkgs:
   {% elif grains['os_family'] == 'RedHat' %}
   go: golang
   git: git
+  iptables: iptables
   pip: python-pip
   pip3: python3-pip
   python: python
@@ -20,6 +22,7 @@ pkgs:
   {% elif grains['os_family'] == 'Debian' %}
   go: golang
   git: git
+  iptables: iptables
   pip: python-pip
   pip3: python3-pip
   python: python
@@ -29,6 +32,7 @@ pkgs:
   {% elif grains['os'] == 'Arch' %}
   go: golang
   git: git
+  iptables: iptables
   pip: python-pip
   pip3: python3-pip
   python: python

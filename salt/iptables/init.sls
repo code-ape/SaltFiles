@@ -2,11 +2,11 @@
 iptables:
   pkg:
     - installed
+    - name: {{ pillar['pkgs']['iptables']}}
   service:
     - running
     - requre:
       - pkg: iptables
-
 
 /etc/sysconfig/iptables:
   file.managed:
@@ -14,5 +14,7 @@ iptables:
     - user: root
     - group: root
     - mode: 644
+    - requires:
+      - pkg: iptables
 
 
