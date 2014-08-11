@@ -1,7 +1,6 @@
 {% if 'vagrant' in grains['roles'] %}
 {% set base_user = "vagrant" %}
-{% else %}
-{% if 'cerebro' in grains['roles'] %}
+{% elif 'cerebro' in grains['roles'] %}
 {% set base_user = "pi" %}
 {% else %}
 {% set base_user = "codeape" %}
