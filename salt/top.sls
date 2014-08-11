@@ -8,7 +8,7 @@ base:
     - utilities
     - iptables
   'roles:cerebro':
-  	- match: grain
-  	- git
-  	- utilities
-  	- iptables
+    - match: grain
+    - git
+    - utilities
+    - iptables

@@ -1,11 +1,11 @@
 
 iptables:
-	pkg:
-		- installed
-	service:
-		- running
-		- requre:
-			- pkg: iptables
+  pkg:
+    - installed
+  service:
+    - running
+    - requre:
+      - pkg: iptables
 
 
 /etc/iptables.rules:
